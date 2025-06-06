@@ -1,27 +1,180 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MACDONALD SITOLO CV</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Macdonald Sitolo Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Macdonald Charles Sitolo | CV</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 20px;
+    }
+    #name {
+      display: block;
+      font-weight: bold;
+    }
+    .photo-rating {
+      margin-top: 20px;
+    }
+    .photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .stars input[type="radio"] {
+      display: none;
+    }
+    .stars label {
+      font-size: 2rem;
+      color: #ccc;
+      cursor: pointer;
+    }
+    .stars input:checked ~ label,
+    .stars label:hover,
+    .stars label:hover ~ label {
+      color: gold;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      margin-top: 40px;
+      opacity: 0;
+      position: relative;
+      animation: slideCycle 12s infinite;
+    }
+    @keyframes slideCycle {
+      0%, 100% { transform: translateX(-100%); opacity: 0; }
+      8% { transform: translateX(0); opacity: 1; }
+      25% { transform: translateX(0); opacity: 1; }
+      33% { transform: translateX(100%); opacity: 0; }
+      100% { opacity: 0; }
+    }
+    .section-content {
+      margin: 0 auto;
+      max-width: 800px;
+      text-align: left;
+      padding: 0 20px;
+    }
+    .socials {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .socials a {
+      color: #333;
+      font-size: 1.5rem;
+    }
+    .download-section {
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
-  <div id="name-container">
-    <h1 id="name" class="hidden"></h1>
+  <h1><span id="name"></span></h1>
+
+  <div class="photo-rating">
+    <img src="passport.jpg" alt="Your photo" class="photo" />
+    <div class="stars">
+      <input type="radio" id="star5" name="rate" value="5"><label for="star5">&#9733;</label>
+      <input type="radio" id="star4" name="rate" value="4"><label for="star4">&#9733;</label>
+      <input type="radio" id="star3" name="rate" value="3"><label for="star3">&#9733;</label>
+      <input type="radio" id="star2" name="rate" value="2"><label for="star2">&#9733;</label>
+      <input type="radio" id="star1" name="rate" value="1"><label for="star1">&#9733;</label>
+    </div>
   </div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+  <div id="sections">
+    <div class="section-title" style="animation-delay: 0s;">Professional Summary</div>
+    <div class="section-title" style="animation-delay: 3s;">Experience</div>
+    <div class="section-title" style="animation-delay: 6s;">Skills</div>
+    <div class="section-title" style="animation-delay: 9s;">Education</div>
+  </div>
 
+  <div class="section-content">
+    <h2>Professional Summary</h2>
+    <p>Conversant with business systems through a background in Business ICT, I am a front-end web and mobile app developer skilled in React, Bootstrap, Tailwind CSS, Flutter, and Java with foundational knowledge in network and system administration. I bring a practical blend of technical ability and business understanding to build solutions that meet both user and organizational needs.</p>
+
+    <h2>Experience</h2>
+    <h4>ICT Support Assistant<br><small>Mulanje Music Company (Online) | Dec 2022 – Current</small></h4>
+    <ul>
+      <li>Upload and manage music content on the website</li>
+      <li>Update and maintain the website’s front end</li>
+      <li>Managing the social media sites of the website</li>
+    </ul>
+
+    <h4>Device Specialist<br><small>Malawi Electoral Commission (MEC), Lilongwe | Oct 2024 – May 2025</small></h4>
+    <ul>
+      <li>Enhanced system stability by monitoring the Electoral Management Device (EMD)</li>
+      <li>Monitored electronic data transfer</li>
+    </ul>
+
+    <h4>IT Intern<br><small>St. Luke’s College of Health Sciences, Zomba | Jan 2025 – April 2025</small></h4>
+    <ul>
+      <li>Offered computer training sessions</li>
+      <li>Ensured the network infrastructure was functional and secure</li>
+      <li>Set up and managed user accounts in the computer lab</li>
+    </ul>
+
+    <h2>Skills</h2>
+    <ul>
+      <li>Mobile app development</li>
+      <li>Front-end web development</li>
+      <li>System and network administration</li>
+      <li>Troubleshooting</li>
+      <li>Collaboration</li>
+      <li>Adaptability</li>
+      <li>Problem solving</li>
+      <li>Creativity</li>
+    </ul>
+
+    <h2>Education</h2>
+    <p>Bachelor of Science: Business Information Technology | IT (Expected July 2025)</p>
+  </div>
+
+  <div class="download-section">
+    <a href="your_cv_link.pdf" download>Download PDF</a> |
+    <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20CV:%20[URL]">Share CV</a>
+  </div>
+
+  <div class="socials">
+    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="#" title="X"><i class="fab fa-x-twitter"></i></a>
+    <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+  </div>
+
+  <script>
+    const nameElement = document.getElementById('name');
+    const sequence = ['Sitolo', 'Charles', 'Macdonald'];
+    let i = 0;
+
+    if (!sessionStorage.getItem('nameAnimated')) {
+      const interval = setInterval(() => {
+        nameElement.textContent = sequence.slice(0, i + 1).join(' ');
+        i++;
+        if (i === sequence.length) {
+          clearInterval(interval);
+          sessionStorage.setItem('nameAnimated', 'true');
+        }
+      }, 1000);
+    } else {
+      nameElement.textContent = sequence.join(' ');
+    }
+  </script>
 </body>
 </html>

@@ -18,16 +18,22 @@
       font-size: 2.5rem;
       margin-top: 20px;
     }
+    h2 {
+      background-color: #0085D0;
+      color: #f0f2f5;
+      text-align: center;
+    }
     #name {
       display: block;
       font-weight: bold;
+      color: #0085D0;
     }
     .photo-rating {
       margin-top: 20px;
     }
     .photo {
-      width: 150px;
-      height: 150px;
+      width: 235px;
+      height:210px;
       border-radius: 50%;
       object-fit: cover;
     }
@@ -43,6 +49,9 @@
     .stars label:hover,
     .stars label:hover ~ label {
       color: gold;
+    }
+    #sections {
+      color: rgb(187, 161, 11);
     }
     .section-title {
       font-size: 1.5rem;
@@ -84,7 +93,7 @@
   <h1><span id="name"></span></h1>
 
   <div class="photo-rating">
-    <img src="passport.jpg" alt="Your photo" class="photo" />
+    <img src="passport.jpg" alt="Owner's Photo" class="photo" />
     <div class="stars">
       <input type="radio" id="star5" name="rate" value="5"><label for="star5">&#9733;</label>
       <input type="radio" id="star4" name="rate" value="4"><label for="star4">&#9733;</label>
@@ -95,11 +104,11 @@
   </div>
 
   <div id="sections">
-    <div class="section-title" style="animation-delay: 0s;">Professional Summary</div>
-    <div class="section-title" style="animation-delay: 3s;">Experience</div>
-    <div class="section-title" style="animation-delay: 6s;">Skills</div>
-    <div class="section-title" style="animation-delay: 9s;">Education</div>
-  </div>
+    <div class="section-title" style="animation-delay: 0s;">Collaborative</div>
+    <div class="section-title" style="animation-delay: 3s;">Adaptable</div>
+    <div class="section-title" style="animation-delay: 6s;">Creative</div>
+    <div class="section-title" style="animation-delay: 9s;">Negotiable</div>
+   </div>
 
   <div class="section-content">
     <h2>Professional Summary</h2>
@@ -139,7 +148,7 @@
     </ul>
 
     <h2>Education</h2>
-    <p>Bachelor of Science: Business Information Technology | IT (Expected July 2025)</p>
+    <p>Bachelor of Science: Business Information Technology | IT (July 2025)</p>
   </div>
 
   <div class="download-section">
@@ -160,7 +169,7 @@
 
   <script>
     const nameElement = document.getElementById('name');
-    const sequence = ['Sitolo', 'Charles', 'Macdonald'];
+    const sequence = ['MACDONALD', 'CHARLES', 'SITOLO'];
     let i = 0;
 
     if (!sessionStorage.getItem('nameAnimated')) {
